@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập mạng</title>
+</head>
+<body>
+Array 1: <input type="text" id="arr1"/>
+Array 2:<input type="text" id="arr2"/>
+<button type="button" onclick="sosanh()">COMPARE</button>
+<div id="hienthi"></div>
+<script>
+    let arr1 = document.getElementById('arr1').value;
+    let arr2 = document.getElementById('arr2').value;
+
+    function sosanh() {
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] === arr2[i]) {
+                document.getElementById('hienthi').innerHTML = "LIKE";
+            } else {
+                document.getElementById('hienthi').innerHTML = "UNLIKE";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

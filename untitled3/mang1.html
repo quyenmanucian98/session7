@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng hàm có sẵn</title>
+</head>
+<body>
+<script>
+    let myClub = ["Red","Pink","Green","White"];
+    document.write(myClub);
+</script>
+<script>
+    let num = prompt('Nhập vào 1 dãy số bất kỳ');
+    let str = num.toString();
+    let  result = [str[0]];
+    for (let q=1;q<str.length;q++){
+        if ((str[q-1]%2===0)&&(str[q]%2===0)){
+            result.push('-',str[q]);
+        }else {
+            result.push(str[q]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+<script>
+    let str = 'c';
+    let UPPER = 'ZXCVBNM';
+    let LUPPER = 'zxcvbnm';
+    let result=[];
+    for(let d=0;d<str.length;d++){
+        if(UPPER.indexOf(str[d])!==-1){
+            result.push(str[d].toLowerCase());
+        }else if (LUPPER.indexOf(str[d])!==-1){
+            result.push(str[d].toUpperCase());
+        }else {
+            result.push(str[d]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>

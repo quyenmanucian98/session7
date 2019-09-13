@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+<h2>Add New Product</h2><br>
+<input size="30px" style="height: 30px;" id="newproduct" type="text" placeholder="New Product"/>
+<button style="height: 40px" type="button" onclick="add()">ADD</button><br>
+<h2>Display All Product</h2>
+<h3 style="position: relative;left: 88px">Product Name</h3>
+    <div id="10"></div>
+<table>
+    <tr>
+        <th style="position: relative;left: 100px; height: 40px;">Sony Xperia</th>
+        <th><button style="position: relative;left: 250px;height: 40px" type="button" onclick="edit1()">Edit</button></th>
+        <th><button style="position: relative;left: 260px;height: 40px" type="button" onclick="delete1()">Delete</button></th>
+    </tr>
+    <tr>
+        <th style="position: relative;left: 100px; height: 40px;">Samsung Galaxy</th>
+        <th><button style="position: relative;left: 250px;height: 40px" type="button" onclick="edit2()">Edit</button></th>
+        <th><button style="position: relative;left: 260px;height: 40px" type="button" onclick="delete2()">Delete</button></th>
+    </tr>
+    <tr>
+        <th style="position: relative;left: 100px; height: 40px;">Nokia 6</th>
+        <th><button style="position: relative;left: 250px;height: 40px" type="button" onclick="edit3()">Edit</button></th>
+        <th><button style="position: relative;left: 260px;height: 40px" type="button" onclick="delete3()">Delete</button></th>
+    </tr>
+    <tr>
+        <th style="position: relative;left: 100px; height: 40px;">Xiaomi Redmi Note 4</th>
+        <th><button style="position: relative;left: 250px;height: 40px" type="button" onclick="edit4()">Edit</button></th>
+        <th><button style="position: relative;left: 260px;height: 40px" type="button" onclick="delete4()">Delete</button></th>
+    </tr>
+    <tr>
+        <th style="position: relative;left: 100px; height: 40px;">Apple iPhone 6S</th>
+        <th><button style="position: relative;left: 250px;height: 40px" type="button" onclick="edit5()">Edit</button></th>
+        <th><button style="position: relative;left: 260px;height: 40px" type="button" onclick="delete5()">Delete</button></th>
+    </tr>
+    <tr>
+        <th style="position: relative;left: 100px; height: 40px;">Xiaomi 5s Plus</th>
+        <th><button style="position: relative;left: 250px;height: 40px" type="button" onclick="edit6()">Edit</button></th>
+        <th><button style="position: relative;left: 260px;height: 40px" type="button" onclick="delete6()">Delete</button></th>
+    </tr>
+    <tr>
+        <th style="position: relative;left: 100px; height: 40px;">Apple iPhone 8 Plus</th>
+        <th><button style="position: relative;left: 250px;height: 40px" type="button" onclick="edit7()">Edit</button></th>
+        <th><button style="position: relative;left: 260px;height: 40px" type="button" onclick="delete7()">Delete</button></th>
+    </tr>
+</table>
+</fieldset>
+<script>
+    function add() {
+        let add1 = document.getElementById('newproduct').value;
+        document.getElementById('10').innerHTML=add1;
+        }
+</script>
+</body>
+</html>

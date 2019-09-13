@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="checkCard()">Check Card</button>
+<div id="hienthi"></div>
+<br>
+<button type="button" onclick="shuffle()">Shuffle</button>
+<br>
+Player 1: <p id="player123"></p><br>
+Player 2: <p id="player1234"></p><br>
+<button type="button" onclick="play()">play</button>
+<br>
+<div id="ketqua"></div>
+
+
+<script>
+    let array = [];
+    let player1 = [];
+    let player2 = [];
+    let score1 = 0;
+    let score2 = 0;
+    let count = 0;
+
+    function checkCard() {
+        for (let i = 1; i <= 52; i++) {
+            array.push(i);
+        }
+        document.getElementById('hienthi').innerHTML = array;
+    }
+
+    function shuffle() {
+        for (let i = 0; i < array.length; i++) {
+            let randomNum = Math.floor(Math.random() * array.length);
+            player1.push(array[randomNum]);
+            array.splice(randomNum, 1);
+            player2 = array
+        }
+        document.getElementById('player123').innerHTML = player1;
+        document.getElementById('player1234').innerHTML = player2;
+        setInterval(play,100);
+    }
+
+    function play() {
+        if (count < player1.length) {
+            if (player1[count] > player2[count]) {
+                score1++;
+            } else {
+                score2++;
+            }
+            count++;
+        }
+
+        display();
+    }
+
+    function display() {
+        document.getElementById('ketqua').innerHTML = score1 + ":" + score2;
+        if (count >= player1.length) {
+            if (score1 > score2) {
+                document.getElementById('ketqua').innerHTML = "Player1 Win " + score1;
+            } else if (score2 > score1) {
+                document.getElementById('ketqua').innerHTML = "Play2 Win " + score2;
+            } else {
+                document.getElementById('ketqua').innerHTML = "Equal"
+            }
+        }
+    }
+</script>
+</body>
+</html>

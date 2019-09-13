@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle game</title>
+</head>
+<body>
+<img src="ronaldo.jpg" id="anh" alt="1" style="position: relative;left: 10px;top: 10px" onclick="doianh()"/>
+<script>
+    let img = document.getElementById('anh');
+
+    function doianh() {
+        if (img.alt == "1") {
+            img.src = "rooney.jpg";
+            img.alt = "2";
+        } else if (img.alt == "2") {
+            img.src = "tevez.jpg";
+            img.alt = "3";
+        }else {
+            img.src="ronaldo.jpg";
+            img.alt="1"
+        }
+    }
+
+</script>
+</body>
+</html>
