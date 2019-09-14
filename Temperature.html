@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi nhiệt độ</title>
+</head>
+<body>
+<script>
+    let Temperature = function (C) {
+        this.C = C;
+        this.getC = function () {
+            return C;
+        }
+        this.getF = function () {
+            return (this.C * 1.8) + 32;
+        }
+        this.getkenvin = function () {
+            return this.C + 273.15;
+        }
+    }
+    let temperature = new Temperature(C)
+    let temperatureF = temperature.getF();
+    let temperatureKenvin = temperature.getkenvin();
+    alert("độ F là: " + temperatureF + " ; " + "độ kenvin là: " + temperatureKenvin)
+</script>
+</body>
+</html>
