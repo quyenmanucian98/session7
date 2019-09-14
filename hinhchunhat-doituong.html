@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="900px" height="500px" style="border: 10px solid pink"/>
+<div id="hienthi"></div>
+<script>
+    function Rectangle(height, width, perimeter, acreage) {
+        this.height = height;
+        this.width = width;
+        this.acreage = acreage;
+        this.perimeter = perimeter;
+    }
+let height = Number(prompt("nhập chiều dài"));
+    let width = Number(prompt("nhập chiều rộng"))
+    function paintRectangle() {
+        let stx = document.getElementById('myCanvas').getContext("2d");
+        let rectangle = new Rectangle(width, height);
+        stx.beginPath();
+        stx.rect(100,100, rectangle.height, rectangle.width);
+
+        stx.fillStyle = "pink";
+        stx.fill();
+    }
+    alert("chiều dài:" +height + "<br>" + "chiều rộng:" + width);
+    paintRectangle();
+</script>
+</body>
+</html>
