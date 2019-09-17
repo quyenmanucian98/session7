@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điện thoại</title>
+
+</head>
+<body>
+<fieldset>
+    <table width="50%">
+        <legend>NOKIA</legend>
+        <h4><p id="batteryNokia"></p></h4>
+        <input id="nokia" type="text" placeholder="Message of Nokia" oninput="nokia.writeMessage(this.value)"/>
+        <button type="button" onclick="sendMessages(nokia, iphone)">SEND</button>
+        <th>
+            <tr>
+                <td><h4>Hộp Thư Đến</h4></td>
+                <td><h4>Hộp Thư Đi</h4></td>
+            </tr>
+            <tr>
+                <td><p id="nokiaTo"></p></td>
+                <td>
+                    <div id="nokiaFrom"></div>
+                </td>
+            </tr>
+        </th>
+    </table>
+</fieldset>
+<fieldset>
+    <table style="width: 50%">
+        <legend>Iphone X</legend>
+        <h4>
+            <div id="batteryIphone"></div>
+        </h4>
+        <input id="iphone" type="text" placeholder="Message of Iphone" oninput="iphone.writeMessage(this.value)">
+        <button type="button" onclick="sendMessages(iphone, nokia)">SEND</button>
+        <th>
+            <tr>
+                <td><h4>Hộp Thư Đến</h4></td>
+                <td><h4>Hộp Thư Đi</h4></td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="iphoneTo"></div>
+                </td>
+                <td>
+                    <div id="iphoneFrom"></div>
+                </td>
+            </tr>
+        </th>
+    </table>
+</fieldset>
+<script src="OOP.js"></script>
+</body>
+</html>

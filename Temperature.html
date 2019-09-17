@@ -18,7 +18,8 @@
             return this.C + 273.15;
         }
     }
-    let temperature = new Temperature(C)
+    let C = Number(prompt('Nhập nhiệt độ'));
+    let temperature = new Temperature(C);
     let temperatureF = temperature.getF();
     let temperatureKenvin = temperature.getkenvin();
     alert("độ F là: " + temperatureF + " ; " + "độ kenvin là: " + temperatureKenvin)

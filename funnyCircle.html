@@ -20,7 +20,7 @@
         ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
         ctx.fill();
     }
-    createCircle()
+    createCircle();
 
     function Circle(x, y, radius) {
         this.x = x;
@@ -72,7 +72,7 @@
 
     function running() {
         for (let i = 0; i < 1000; i++) {
-            createCircle()
+            createCircle();
             setTimeout(createCircle, 1000)
         }
     }
