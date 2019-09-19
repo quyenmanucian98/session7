@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Email</title>
+</head>
+<body>
+<script>
+    let email ="@gmail.com" ;
+    function check(str) {
+        let gmail = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        if (gmail.test(str)) {
+            console.log("Email hợp lệ");
+        } else {
+            console.log("Email không hợp lệ");
+        }
+    }
+    check(email);
+</script>
+</body>
+</html>
