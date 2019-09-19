@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function ValidateClassName(str) {
+        regex = /^[C|A|P]+[0-9]{4}[A-Za-z0-9]*[GHIKLM]$/;
+        if (regex.test(str)) {
+            console.log("Tên lớp hợp lệ");
+        } else {
+            console.log("Tên lớp không hợp lệ");
+        }
+    }
+</script>
+</body>
+</html>
