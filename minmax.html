@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min Max</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 100; i++) {
+        arr[i] = Math.round(Math.random() * 100);
+    }
+
+    function maxi() {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        console.log(max);
+    }
+maxi();
+</script>
+</body>
+</html>

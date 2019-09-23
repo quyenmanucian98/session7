@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dem so lan xuat hien</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 100; i++) {
+        arr[i] = Math.floor(Math.random() * 99);
+    }
+    console.log(arr);
+    counter();
+
+    function counter() {
+        let value = prompt("Enter Number Need To Check");
+        let count1 = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (value === arr[i]) {
+                count1++;
+            }
+        }
+        console.log(count1);
+
+
+    }
+
+
+</script>
+</body>
+</html>
