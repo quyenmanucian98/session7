@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+    <h2>Add New Product</h2><br>
+    <input size="30px" style="height: 30px;" id="newproduct" type="text" placeholder="New Product"/>
+    <button style="height: 40px" type="button" onclick="addproduct()">ADD</button>
+    <br>
+    <h2>Display All Product</h2>
+    <h3 style="position: relative;left: 88px">Product Name</h3>
+    <div id="add"></div>
+</fieldset>
+<script>
+    let product10 = [];
+
+    function addproduct() {
+        let product = document.getElementById('newproduct');
+        product10.push(product.value);
+        product.value = "";
+        displayProduct();
+    }
+    function displayProduct() {
+        document.getElementById('add').innerHTML ="";
+        for (let i = 0; i < product10.length; i++) {
+            document.getElementById('add').innerHTML += product10[i] + "<br>";
+        }
+    }
+</script>
+</body>
+</html>
