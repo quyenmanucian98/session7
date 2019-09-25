@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều khiển tivi</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input style="width: 200px; height: 100px" id="show" type="text">
+        </td>
+        <td>
+            <div id="volume"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="ontivi()">ON</button>
+            <button type="button" onclick="offtivi()">OFF</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="upVolume()">Up Volume</button>
+            <button type="button" onclick="downVolume()">Down Volume</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="changeChannel()">Change Channels</button>
+        </td>
+    </tr>
+</table>
+</body>
+<script src="RemoteTV.js"></script>
+</html>
